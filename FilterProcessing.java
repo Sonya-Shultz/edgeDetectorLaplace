@@ -3,10 +3,10 @@ package com.company;
 public class FilterProcessing {
 
     static int[][] apply(int[][] pixels, double[] c, double threshLvl){
-        int dif = (int) ((Math.sqrt(c.length)-1)/2);
-        int h = pixels.length -dif*2;
-        int w = pixels[0].length -dif*2;
-        int[][] my_pxls = new int[h][w];
+        int dif = (int) ((Math.sqrt(c.length))/2);
+        int h = pixels.length;
+        int w = pixels[0].length;
+        int[][] my_pxls = new int[h-dif*2][w-dif*2];
         int color=0;
         int[] a = new int[c.length];
         for(int y =dif; y<h-dif; y++){

@@ -9,7 +9,6 @@ public class StripThread implements Callable<int[][]> {
         threshLvl = lvl;
     }
     int[][] input;
-    int[][] output;
     double[] filter;
     double threshLvl;
     @Override
