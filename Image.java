@@ -111,6 +111,8 @@ public class Image {
             }
         }
         ImageIO.write(b,"jpg",new File(name));
+        System.out.println("____________________________________");
         System.out.println("Write to "+name+" file. Status: complete.");
+        System.out.println("____________________________________");
     }
 }

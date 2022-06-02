@@ -22,7 +22,7 @@ public class FilterProcessing {
                 }
                 if(color < 0) color = 0;
                 else if(color >255) color = 255;
-                my_pxls[y-1][x-1] = (255 << 24) | color |(color << 8)|(color<<16);
+                my_pxls[y-dif][x-dif] = (255 << 24) | color |(color << 8)|(color<<16);
             }
         }
         zeroOrOne(my_pxls, threshLvl);

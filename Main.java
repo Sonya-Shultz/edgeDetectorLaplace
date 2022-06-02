@@ -10,7 +10,9 @@ public class Main {
         env.showInput();
         try {
             Image input = new Image(env.fileName);
+            System.out.println("____________________________________");
             System.out.println("Size of input img: "+input.getH()+"X"+input.getW());
+            System.out.println("____________________________________");
             if (input.getH() < Math.sqrt(env.kernel.length)) throw new IndexOutOfBoundsException();
             int[][] res = StripPool.start(env,input);
             env.showExecutionTime("parallel");

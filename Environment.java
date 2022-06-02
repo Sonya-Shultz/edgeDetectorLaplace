@@ -11,15 +11,20 @@ public class Environment {
     long end;
 
     public void showInput(){
+        System.out.println("____________________________________");
         System.out.println("Input file: "+fileName);
         System.out.println("Output file: "+outputName);
         System.out.println("Thresh lvl: "+threshCount);
         System.out.println("Filter kernel: "+k_name);
         System.out.println("Number of Thread: "+threadCount);
+        System.out.println("____________________________________");
     }
 
     public void showExecutionTime(String name){
+        if (threadCount == 1) name = "linear";
+        System.out.println("____________________________________");
         System.out.println("For "+name+" execution time is "+(end-start)+" milli seconds.");
+        System.out.println("____________________________________");
     }
 
     public void parseInputData(String[] args) throws NumberFormatException{
