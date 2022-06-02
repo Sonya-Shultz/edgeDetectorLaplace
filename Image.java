@@ -7,8 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Image {
-    int w = 0;
-    int h = 0;
+    private int w = 0;
+    private int h = 0;
     int[][] img;
     public Image() throws IOException {
         w = 0;

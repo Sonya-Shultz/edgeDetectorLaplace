@@ -7,13 +7,19 @@ public class Environment {
     double threshCount = 0.75;
     String outputName = "src/resurce/output.jpg";
     int threadCount = 5;
+    long start;
+    long end;
 
     public void showInput(){
         System.out.println("Input file: "+fileName);
         System.out.println("Output file: "+outputName);
         System.out.println("Thresh lvl: "+threshCount);
         System.out.println("Filter kernel: "+k_name);
-        //System.out.println("Number of Thread: "+threadCount);
+        System.out.println("Number of Thread: "+threadCount);
+    }
+
+    public void showExecutionTime(String name){
+        System.out.println("For "+name+" execution time is "+(end-start)+" milli seconds.");
     }
 
     public void parseInputData(String[] args) throws NumberFormatException{
